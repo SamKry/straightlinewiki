@@ -1,0 +1,123 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table of Contents</title>
+  <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"-->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /*Table styling*/
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+      text-align: center;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    th, td {
+      padding: 10px 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th:hover {
+      cursor: pointer;
+      background-color: #f5f5f5;
+    }
+
+    .asc::after {
+      content: " ▲";
+    }
+
+    .desc::after {
+      content: " ▼";
+    }
+
+    /*Hover effect*/
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    /*Responsive image*/
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="mt-3">Table of Contents</h1>
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Title <span class="asc"></span></th>
+          <th onclick="sortTable(1)">Author <span class="asc"></span></th>
+          <th onclick="sortTable(2)">Year <span class="asc"></span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Introduction to Algorithms</td>
+          <td>Thomas H. Cormen</td>
+          <td>2009</td>
+        </tr>
+        <tr>
+          <td>Data Structures and Algorithms in Java</td>
+          <td>Robert Lafore</td>
+          <td>2002</td>
+        </tr>
+        <tr>
+          <td>Cracking the Coding Interview</td>
+          <td>Gayle Laakmann McDowell</td>
+          <td>2015</td>
+        </tr>
+        <tr>
+          <td>The Art of Computer Programming</td>
+          <td>Donald E. Knuth</td>
+          <td>1968</td>
+        </tr>
+        <tr>
+          <td>Introduction to Computer Science</td>
+          <td>David J. Eck</td>
+          <td>2017</td>
+        </tr>
+        <tr>
+          <td>Code Complete</td>
+          <td>Steve McConnell</td>
+          <td>1993</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  <script>
+    function sortTable(columnIndex) {
+      let table = document.getElementById("myTable");
+      let rows = Array.from(table.rows);
+      let headerRow = rows.shift();
+      let isAscending = headerRow.getElementsByTagName("span")[columnIndex].classList.toggle("asc");
+      headerRow.getElementsByTagName("span")[columnIndex].classList.toggle("desc");
+
+      rows.sort((rowA, rowB) => {
+        let cellA = rowA.cells[columnIndex].textContent.trim();
+        let cellB = rowB.cells[columnIndex].textContent.trim();
+
+        if (cellA === cellB) return 0;
+
+        if (isAscending) {
+          return cellA.localeCompare(cellB);
+        } else {
+          return cellB.localeCompare(cellA);
+        }
+      });
+
+      table.tBodies[0].append(...rows);
+    }
+  </script>
+</body>
+</html>
