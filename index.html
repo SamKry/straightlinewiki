@@ -11,29 +11,53 @@
     <header>
         <h1>Straight Line Wiki</h1>
     </header>
-    <main>
+    <main style="position: relative;">
 	<b>PLEASE NOTE THAT THIS WEBSITE IS NOT COMPLETE YET</b>
-	<hr>
+	<p></p>
 	<b>there is still a lot of data to be gathered and functionality to be built in. This website will be done soon, hopefully.</b>
-        <p>This website is dedicated to those who take on the ordeal of straight line missions.</p>
+  <p>This website is dedicated to those who take on the ordeal of straight line missions.</p>
 	<p>Our ultimate goal is to index every relevant straight line a human has ever walked.</p>
-        <a href="sorry.html"><button id="btn"><img src="assets/images/question.png"><h3>Straight Line What?</h3></button></a>
-        <a href="sorry.html"><button id="btn"><img src="assets/images/question.png"><h3>What are the criteria?</h3></button></a>
-        <a href="sorry.html"><button id="btn"><img src="assets/images/question.png"><h3>How did it all start?</h3></button></a>
+
+  <!--buttons-->
+  <div>
+    <a href="sorry.html"><button id="btn" onmouseover="showContent(1)" onmouseout="hideContent(1)"><img src="assets/images/question.png"><h3>Straight Line What?</h3></button></a>
+    <a href="sorry.html"><button id="btn" onmouseover="showContent(2)" onmouseout="hideContent(2)"><img src="assets/images/question.png"><h3>What are the criteria?</h3></button></a>
+    <a href="sorry.html"><button id="btn" onmouseover="showContent(3)" onmouseout="hideContent(3)"><img src="assets/images/question.png"><h3>How did it all start?</h3></button></a>
+      <div>
+        <div id="content1" class="container2" style="opacity: 0;">
+          <h3>Straight Line Missions</h3>
+          <p>(explain what SLMs are here)</p>
+        </div>
+        <div id="content2" class="container2" style="opacity: 0;">
+          <h3>The criteria</h3>
+          <p>(explain how to measure SLMs here)</p>
+        </div>
+        <div id="content3" class="container2" style="opacity: 0;">
+          <h3>Maybe something else</h3>
+          <p>I might actually cover this in the first one</p>
+        </div>
+      </div>
+    </div>
 	<hr>
-	<!--div class='simple'>
-		<h2>This div is a placeholder for the database that I will put here</h2>
-		<p>this</p>
-		<p>is</p>
-		<p>a</p>
-		<p>test</p>
-	</div-->
+
+  <!--table-->
 	<div class="simple">
 		<iframe class="simple" src="table.html"></iframe>
 		<hr>
 		<b>I also plan to make a section where people can comment every straight line.</b>
 		<p>but that takes a lot of effort, and honestly, right now I am more focused on putting all the data onto the table and get the website kind of ready. please be patient. Thank you!</p>
 	</div>
+
+  <script>
+    function showContent(id) {
+      var content = document.getElementById("content" + id);
+      content.style.opacity = "1";
+    }
+    function hideContent(id) {
+      var content = document.getElementById("content" + id);
+      content.style.opacity = "0";
+    }
+  </script>
     </main>
     <footer>
 	    <a href="https://github.com/SimonJoelWarkentin/straightlinewiki">This website is an Open Source project by Simon Joel.</a>
