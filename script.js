@@ -25,7 +25,6 @@ function sortTable(columnIndex) {
     "0%": 1,
     "10%": 2,
     "20%": 3,
-    // add more values and their corresponding index values here
   };
 
   let table = document.getElementById("table.html");
