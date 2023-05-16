@@ -16,8 +16,6 @@ function hideContent(id) {
 //THIS FOLLOWING DOES NOT WORK. BE FUCKING CAREFUL.
 //PLEASE FIX IT.
 /*
-
-
 function sortTable(columnIndex) {
   const valueIndexMap = {
     "incomplete": -1,
@@ -51,6 +49,4 @@ function sortTable(columnIndex) {
 
   table.tBodies[0].append(...rows);
 }
-
-
 */
