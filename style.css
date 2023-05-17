@@ -93,15 +93,10 @@ h3 {
 	border-top: 1px solid #D8D8D8;*/
 }
 
-/*
-h3:hover {
-	color: #111;
-}
-*/
 
 div.simple {
 	width: 99%;
-	height: 900px;
+	height: 111em;
 }
 
 iframe.simple {
@@ -113,8 +108,8 @@ iframe.simple {
 	background: transparent;
 /*	min-height: 180%;*/
 	margin: 0 auto;
-	padding-top: 90px;
-	padding-bottom: 90px;
+	padding-top: 10px;
+	padding-bottom: 50px;
 	border-style: none;
 /*	border-color: #ddd;
 	border-width: 2px;
@@ -156,7 +151,7 @@ footer {
 
 .container2 {
 	position: absolute;
-	top: 35%;
+	top: 30em;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	margin-top: 5px;
@@ -170,7 +165,7 @@ footer {
 	display: block;
 /*	opacity: 0;*/
 	transition: opacity 0.2s ease-in-out;
-}
+
 /*.container2.show {
 	opacity: 1;
 }*/
