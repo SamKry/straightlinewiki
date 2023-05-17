@@ -111,7 +111,7 @@ iframe.simple {
 
 .simple {
 	background: transparent;
-/*	min-height: 100%;*/
+	min-height: 180%;
 	margin: 0 auto;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -156,7 +156,7 @@ footer {
 
 .container2 {
 	position: absolute;
-	top: 5%;
+	top: 12px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	margin-top: 5px;
