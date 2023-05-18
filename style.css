@@ -30,7 +30,7 @@ body {
 
 ::selection {
   color: #fff;
-  background: #252;
+  background: #223320;
 }
 
 img {
@@ -123,7 +123,7 @@ hr {
 
 a {
 	/*font-size: 10px;*/
-	text-decoration: none;
+	text-decoration: underline;
 	color: #010;
 	transition: 0.3s;
 }
