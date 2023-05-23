@@ -54,8 +54,9 @@ img {
   }
 
   #btn { /*may not be necessary*/
+	width: 160px;
 	z-index: 5;
-	margin: 0 10px;
+	margin: 0 30px;
 	cursor: pointer;
 	transition: 0.2s;
   }
@@ -145,7 +146,7 @@ footer {
 
 .container2 {
 	position: absolute;
-	top: 30em;
+	top: 15em;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	margin-top: 5px;
@@ -153,7 +154,7 @@ footer {
 	padding: 30px;
 	border-radius: 10px;
 	background-color: #eee;
-	max-width: 45%;
+	max-width: 50%;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 	z-index: 9999;
 	display: block;
