@@ -102,6 +102,7 @@ div.simple {
 iframe.simple {
 	width: 99%;
 	height: 100%;
+	z-index: 500;
 }
 
 .simple {
