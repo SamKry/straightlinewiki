@@ -35,7 +35,7 @@ body {
 
 
 img {
-	max-width: 80%;
+	max-width: 70%;
 }
 
 
@@ -47,9 +47,9 @@ img {
     cursor: pointer;
     display: inline-block;
     margin: 10px;
-    padding: 10px 20px;
+    padding: 10px 40px;
     height: 120px;
-    width: 120px;
+    width: 160px;
     transition: background-color 0.3s ease-in-out;
   }
 
@@ -152,7 +152,7 @@ footer {
 	padding: 30px;
 	border-radius: 10px;
 	background-color: #eee;
-	max-width: 30%;
+	max-width: 45%;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 	z-index: 9999;
 	display: block;
