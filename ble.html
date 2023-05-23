@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <!--This file exists only as a test. I am trying to write a reasonably ok javascript code for sorting the rows.-->
+<head>
+    <title>Table of Contents</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table id="tableOfContents">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Date</th>
+                <th onclick="sortTable(1)">ID</th>
+                <th onclick="sortTable(2)">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2023-05-15</td>
+                <td>001</td>
+                <td>John Doe</td>
+            </tr>
+            <tr>
+                <td>2023-05-12</td>
+                <td>002</td>
+                <td>Jane Smith</td>
+            </tr>
+            <tr>
+                <td>2023-05-20</td>
+                <td>003</td>
+                <td>Potius Pilatus</td>
+            </tr>
+            <tr>
+                <td>2023-05-18</td>
+                <td>004</td>
+                <td>Emily Johnson</td>
+            </tr>
+            <tr>
+                <td>2023-05-10</td>
+                <td>005</td>
+                <td>Michael Brown</td>
+            </tr>
+            <tr>
+                <td>2023-05-22</td>
+                <td>006</td>
+                <td>Anna Maria</td>
+            </tr>
+            <tr>
+                <td>2023-05-17</td>
+                <td>007</td>
+                <td>James Bond</td>
+            </tr>
+            <tr>
+                <td>2023-05-14</td>
+                <td>N/A</td>
+                <td>Olivia Wilson</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+    function sortTable(column) {
+        var table, rows, switching, i, x, y, shouldSwitch;
+        table = document.getElementById("tableOfContents");
+        switching = true;
+
+        // Toggle the sort direction based on the clicked column
+        var sortDirection;
+        if (table.rows[0].cells[column].classList.contains("asc")) {
+            sortDirection = "desc";
+        } else {
+            sortDirection = "asc";
+        }
+
+        // Remove the "asc" or "desc" class from all columns
+        for (i = 0; i < table.rows[0].cells.length; i++) {
+            table.rows[0].cells[i].classList.remove("asc", "desc");
+        }
+
+        // Add the appropriate "asc" or "desc" class to the clicked column
+        table.rows[0].cells[column].classList.add(sortDirection);
+
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+
+            for (i = 1; i < rows.length - 1; i++) {
+                shouldSwitch = false;
+                x = rows[i].cells[column].textContent;
+                y = rows[i + 1].cells[column].textContent;
+
+                // Compare the values based on the column index
+                if (column === 0) { // Sort by Date (newest/oldest)
+                    shouldSwitch = compareDates(x, y, sortDirection);
+                } else if (column === 1) { // Sort by ID (numeric)
+                    shouldSwitch = compareNumeric(x, y, sortDirection);
+                } else if (column === 2) { // Sort by Name (alphabetical)
+                    shouldSwitch = compareAlphabetical(x, y, sortDirection);
+                }
+
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                }
+            }
+        }
+    }
+
+    function compareDates(date1, date2, sortDirection) {
+        var d1 = new Date(date1);
+        var d2 = new Date(date2);
+
+        if (sortDirection === "asc") {
+            return d1 > d2;
+        } else {
+            return d1 < d2;
+        }
+    }
+
+    function compareNumeric(num1, num2, sortDirection) {
+        if (num1 === "N/A") {
+            return sortDirection === "asc" ? false : true;
+        } else if (num2 === "N/A") {
+            return sortDirection === "asc" ? true : false;
+        } else {
+            if (sortDirection === "asc") {
+                return parseFloat(num1) > parseFloat(num2);
+            } else {
+                return parseFloat(num1) < parseFloat(num2);
+            }
+        }
+    }
+
+    function compareAlphabetical(str1, str2, sortDirection) {
+        if (str1 === "N/A") {
+            return sortDirection === "asc" ? false : true;
+        } else if (str2 === "N/A") {
+            return sortDirection === "asc" ? true : false;
+        } else {
+            if (sortDirection === "asc") {
+                return str1.localeCompare(str2) > 0;
+            } else {
+                return str1.localeCompare(str2) < 0;
+            }
+        }
+    }
+
+    </script>
+</body>
+</html>
