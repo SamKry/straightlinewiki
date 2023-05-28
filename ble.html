@@ -21,146 +21,111 @@
     </style>
 </head>
 <body>
-    <table id="tableOfContents">
-        <thead>
-            <tr>
-                <th onclick="sortTable(0)">Date</th>
-                <th onclick="sortTable(1)">ID</th>
-                <th onclick="sortTable(2)">Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>2023-05-15</td>
-                <td>001</td>
-                <td>John Doe</td>
-            </tr>
-            <tr>
-                <td>2023-05-12</td>
-                <td>002</td>
-                <td>Jane Smith</td>
-            </tr>
-            <tr>
-                <td>2023-05-20</td>
-                <td>003</td>
-                <td>Potius Pilatus</td>
-            </tr>
-            <tr>
-                <td>2023-05-18</td>
-                <td>004</td>
-                <td>Emily Johnson</td>
-            </tr>
-            <tr>
-                <td>2023-05-10</td>
-                <td>005</td>
-                <td>Michael Brown</td>
-            </tr>
-            <tr>
-                <td>2023-05-22</td>
-                <td>006</td>
-                <td>Anna Maria</td>
-            </tr>
-            <tr>
-                <td>2023-05-17</td>
-                <td>007</td>
-                <td>James Bond</td>
-            </tr>
-            <tr>
-                <td>2023-05-14</td>
-                <td>N/A</td>
-                <td>Olivia Wilson</td>
-            </tr>
-        </tbody>
-    </table>
 
-    <script>
+  <table id="sortable-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Name</th>
+        <th>Start Date</th>
+        <th>Accuracy</th>
+        <th>Medal</th>
+        <th>Score</th>
+        <th>Line Length</th>
+        <th>Max Deviation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Title 1</td>
+        <td>Name 1</td>
+        <td>2022-03-15</td>
+        <td>85%</td>
+        <td>Gold</td>
+        <td>75%</td>
+        <td>10.5 km</td>
+        <td>500 m</td>
+      </tr>
+      <tr>
+        <td>Title 2</td>
+        <td>Name 2</td>
+        <td>2023-01-10</td>
+        <td>92%</td>
+        <td>Silver</td>
+        <td>80%</td>
+        <td>8.2 km</td>
+        <td>350 m</td>
+      </tr>
+      <tr>
+        <td>Title 3</td>
+        <td>Name 3</td>
+        <td>2023-05-01</td>
+        <td>100%</td>
+        <td>Platinum</td>
+        <td>95%</td>
+        <td>15.7 km</td>
+        <td>200 m</td>
+      </tr>
+      <tr>
+        <td>Title 4</td>
+        <td>Name 4</td>
+        <td>2022-11-20</td>
+        <td>N/D</td>
+        <td>N/A</td>
+        <td>N/D</td>
+        <td>12.3 km</td>
+        <td>450 m</td>
+      </tr>
+    </tbody>
+  </table>
 
-    function sortTable(column) {
-        var table, rows, switching, i, x, y, shouldSwitch;
-        table = document.getElementById("tableOfContents");
-        switching = true;
+  <script>
+//This javascript is still not working.
+//Please figure out why
+//I am gonna push it now because I don't wanna wok anymore right now.
 
-        // Toggle the sort direction based on the clicked column
-        var sortDirection;
-        if (table.rows[0].cells[column].classList.contains("asc")) {
-            sortDirection = "desc";
-        } else {
-            sortDirection = "asc";
-        }
+    // Helper function to compare two values
+    function compareValues(a, b) {
+      // Special case for "N/A", "N/D", and "DCS"
+      if (a === "N/A" || a === "N/D" || a === "DCS") {
+        return 1; // Place special values at the end
+      } else if (b === "N/A" || b === "N/D" || b === "DCS") {
+        return -1; // Place special values at the end
+      }
 
-        // Remove the "asc" or "desc" class from all columns
-        for (i = 0; i < table.rows[0].cells.length; i++) {
-            table.rows[0].cells[i].classList.remove("asc", "desc");
-        }
+      // Compare values based on their type
+      if (typeof a === "string" && typeof b === "string") {
+        return a.localeCompare(b); // Sort alphabetically
+      } else if (typeof a === "number" && typeof b === "number") {
+        return b - a; // Sort numerically (highest first)
+      }
 
-        // Add the appropriate "asc" or "desc" class to the clicked column
-        table.rows[0].cells[column].classList.add(sortDirection);
-
-        while (switching) {
-            switching = false;
-            rows = table.rows;
-
-            for (i = 1; i < rows.length - 1; i++) {
-                shouldSwitch = false;
-                x = rows[i].cells[column].textContent;
-                y = rows[i + 1].cells[column].textContent;
-
-                // Compare the values based on the column index
-                if (column === 0) { // Sort by Date (newest/oldest)
-                    shouldSwitch = compareDates(x, y, sortDirection);
-                } else if (column === 1) { // Sort by ID (numeric)
-                    shouldSwitch = compareNumeric(x, y, sortDirection);
-                } else if (column === 2) { // Sort by Name (alphabetical)
-                    shouldSwitch = compareAlphabetical(x, y, sortDirection);
-                }
-
-                if (shouldSwitch) {
-                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                    switching = true;
-                }
-            }
-        }
+      return 0; // Values are of different types, no comparison possible
     }
 
-    function compareDates(date1, date2, sortDirection) {
-        var d1 = new Date(date1);
-        var d2 = new Date(date2);
+    // Function to sort the table rows based on the clicked column
+    function sortTable(columnIndex) {
+      const table = document.getElementById("sortable-table");
+      const rows = Array.from(table.getElementsByTagName("tr"));
 
-        if (sortDirection === "asc") {
-            return d1 > d2;
-        } else {
-            return d1 < d2;
-        }
+      rows.sort((rowA, rowB) => {
+        const cellA = rowA.getElementsByTagName("td")[columnIndex].textContent;
+        const cellB = rowB.getElementsByTagName("td")[columnIndex].textContent;
+        return compareValues(cellA, cellB);
+      });
+
+      // Reorder the rows in the table
+      const tbody = table.getElementsByTagName("tbody")[0];
+      rows.forEach(row => tbody.appendChild(row));
     }
 
-    function compareNumeric(num1, num2, sortDirection) {
-        if (num1 === "N/A") {
-            return sortDirection === "asc" ? false : true;
-        } else if (num2 === "N/A") {
-            return sortDirection === "asc" ? true : false;
-        } else {
-            if (sortDirection === "asc") {
-                return parseFloat(num1) > parseFloat(num2);
-            } else {
-                return parseFloat(num1) < parseFloat(num2);
-            }
-        }
-    }
+    // Attach click event listeners to the table headers for sorting
+    const headers = Array.from(document.querySelectorAll("#sortable-table th"));
+    headers.forEach((header, index) => {
+      header.addEventListener("click", () => sortTable(index));
+      header.style.cursor = "pointer"; // Show pointer cursor on hover
+    });
+  </script>
 
-    function compareAlphabetical(str1, str2, sortDirection) {
-        if (str1 === "N/A") {
-            return sortDirection === "asc" ? false : true;
-        } else if (str2 === "N/A") {
-            return sortDirection === "asc" ? true : false;
-        } else {
-            if (sortDirection === "asc") {
-                return str1.localeCompare(str2) > 0;
-            } else {
-                return str1.localeCompare(str2) < 0;
-            }
-        }
-    }
-
-    </script>
 </body>
 </html>
