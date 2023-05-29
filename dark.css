@@ -1,9 +1,10 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
-//This css is for the dark mode
-//DON'T USE IT YET
-//IT IS NOT READY!
-
+/*
+This css is for the dark mode
+DON'T USE IT YET
+IT IS NOT READY!
+*/
 
 * {
 	-webkit-box-sizing: border-box;
@@ -145,7 +146,7 @@ footer {
         margin-bottom: 5px;
         padding: 30px;
         border-radius: 10px;
-        background-color: #213314;
+        background-color: #222222;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
       }
 
