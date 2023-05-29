@@ -141,14 +141,14 @@ footer {
 }
 
 
-      .container {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        padding: 30px;
-        border-radius: 10px;
-        background-color: #222222;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-      }
+.container {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #282828;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
 
 .container2 {
 	position: absolute;
@@ -159,7 +159,7 @@ footer {
 	margin-bottom: 5px;
 	padding: 30px;
 	border-radius: 10px;
-	background-color: #282828;
+	background-color: #323232;
 	max-width: 50%;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 	z-index: 9999;
@@ -176,4 +176,43 @@ tr {
 tr:hover {
 	opacity: 0.8;
 	transform: scale(1.05);
+}
+
+
+
+/*Following is for the table:*/
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+th, td {
+	padding: 10px 15px;
+	text-align: center;
+	border-bottom: 1px solid #888;
+}
+
+th:hover {
+	cursor: pointer;
+	background-color: #454545;
+}
+
+.asc::after {
+	content: " ▲";
+}
+
+.desc::after {
+	content: " ▼";
+}
+
+  /*Hover effect*/
+tr:hover {
+	background-color: #454545;
+	opacity: 0.92;
+	transform: scale(1.01);
 }
