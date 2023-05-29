@@ -1,0 +1,178 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+//This css is for the dark mode
+//DON'T USE IT YET
+//IT IS NOT READY!
+
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+header {
+	margin-top: 3%;
+}
+
+html {
+	scroll-behavior: smooth;
+  } 
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.75em;
+	font-size: 16px;
+	background-color: #181818;
+/*	background-image: linear-gradient(to right, #cdcdcd, #abacab , #ccc, #abacab, #cdcdcd);*//*wtf was I thinking??? (Actually kinda cool, but not really)*/
+	color: #eee;
+	text-align: center;
+}
+
+::-moz-selection { /* (may not be relevant at all) Code for Firefox */
+  color: #232;
+  background: #ccffcf;
+}
+
+::selection {
+    color: #232;
+    background: #ccffcf;
+}
+
+
+img {
+	max-width: 70%;
+}
+
+
+ button {
+    background: transparent;
+    border: #111;
+    border-radius: 40px;
+    color: #efefef;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 40px;
+    height: 120px;
+    width: 160px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  #btn { /*may not be necessary*/
+	width: 160px;
+	z-index: 5;
+	margin: 0 30px;
+	cursor: pointer;
+	transition: 0.2s;
+  }
+
+
+/*
+  #btn img {
+    transition: 0.2s;
+  }
+
+  #btn img:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+*/
+
+
+  #btn:hover {
+	opacity: 0.8;
+	transform: scale(1.05);
+	color: #efffef;
+  }
+
+h1 {
+	font-size: 40px;
+	line-height: 34px;
+}
+
+p {
+	font-size: 16px;
+	color: #efffef;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+
+div.simple {
+	width: 100%;
+	height: 109em;
+}
+
+iframe.simple {
+	width: 99%;
+	height: 100%;
+	z-index: 500;
+}
+
+.simple {
+	background: transparent;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 50px;
+	border-style: none;
+}
+
+hr {
+	opacity: 0;
+	padding-bottom: 20px;
+}
+
+a {
+	/*font-size: 10px;*/
+	text-decoration: underline;
+	color: #88ff77;
+	transition: 0.3s;
+}
+
+a[href]:hover {
+	color: #ffa;
+}
+
+footer {
+	margin-top: 20%;
+}
+
+
+      .container {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #213314;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      }
+
+.container2 {
+	position: absolute;
+	top: 6%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 30px;
+	border-radius: 10px;
+	background-color: #282828;
+	max-width: 50%;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+	z-index: 9999;
+	display: block;
+/*	opacity: 0;*/
+	transition: opacity 0.2s ease-in-out;
+}
+
+tr {
+	opacity: 1;
+	transition-duration: 0.2s;
+}
+
+tr:hover {
+	opacity: 0.8;
+	transform: scale(1.05);
+}
