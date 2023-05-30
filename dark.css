@@ -23,7 +23,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	line-height: 1.75em;
 	font-size: 16px;
-	background-color: #181818;
+	background-color: #282828;
 /*	background-image: linear-gradient(to right, #cdcdcd, #abacab , #ccc, #abacab, #cdcdcd);*//*wtf was I thinking??? (Actually kinda cool, but not really)*/
 	color: #eee;
 	text-align: center;
@@ -128,12 +128,12 @@ hr {
 a {
 	/*font-size: 10px;*/
 	text-decoration: underline;
-	color: #88ff77;
+	color: #889977;
 	transition: 0.3s;
 }
 
 a[href]:hover {
-	color: #ffa;
+	color: #eef;
 }
 
 footer {
@@ -146,7 +146,7 @@ footer {
     margin-bottom: 5px;
     padding: 30px;
     border-radius: 10px;
-    background-color: #282828;
+    background-color: #353535;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -159,7 +159,7 @@ footer {
 	margin-bottom: 5px;
 	padding: 30px;
 	border-radius: 10px;
-	background-color: #323232;
+	background-color: #3f3f3f;
 	max-width: 50%;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 	z-index: 9999;
@@ -199,7 +199,7 @@ th, td {
 
 th:hover {
 	cursor: pointer;
-	background-color: #454545;
+	background-color: #555;
 }
 
 .asc::after {
