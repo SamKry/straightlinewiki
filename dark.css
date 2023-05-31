@@ -17,7 +17,35 @@ header {
 
 html {
 	scroll-behavior: smooth;
-  } 
+  }
+
+.menudiv {
+	height: 80px;
+	background-color: #383838;
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+}
+
+.menubutton {
+	height: 80px;
+	transition-duration: 0.2s;
+	cursor: pointer;
+	display: inline-block;
+	margin-top: 0;
+	margin-right: 2%;
+	margin-left: 2%;
+	width: 100px;
+	font-size: 14px;
+	color: #efe;
+  background: transparent;
+	border: none;
+}
+
+.menubutton:hover {
+	background-color: #424242;
+	transform: scale(1.05);
+}
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -44,7 +72,7 @@ img {
 	max-width: 70%;
 }
 
-
+/*
  button {
     background: transparent;
     border: #111;
@@ -59,7 +87,7 @@ img {
     transition: background-color 0.3s ease-in-out;
   }
 
-  #btn { /*may not be necessary*/
+  #btn {
 	width: 160px;
 	z-index: 5;
 	margin: 0 30px;
@@ -68,7 +96,7 @@ img {
   }
 
 
-/*
+
   #btn img {
     transition: 0.2s;
   }
@@ -77,7 +105,7 @@ img {
     opacity: 0.8;
     transform: scale(1.2);
   }
-*/
+
 
 
   #btn:hover {
@@ -85,6 +113,8 @@ img {
 	transform: scale(1.05);
 	color: #efffef;
   }
+
+*/
 
 h1 {
 	font-size: 40px;

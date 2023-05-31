@@ -11,7 +11,35 @@ header {
 
 html {
 	scroll-behavior: smooth;
-  } 
+  }
+
+.menudiv {
+	height: 80px;
+	background-color: #e6e6e6;
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+}
+
+.menubutton {
+	height: 80px;
+	transition-duration: 0.2s;
+	cursor: pointer;
+	display: inline-block;
+	margin-top: 0;
+	margin-right: 2%;
+	margin-left: 2%;
+	width: 100px;
+	font-size: 14px;
+	color: #121;
+  background: transparent;
+	border: none;
+}
+
+.menubutton:hover {
+	background-color: #c4c4c4;
+	transform: scale(1.05);
+}
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -38,47 +66,50 @@ img {
 	max-width: 70%;
 }
 
-
- button {
-    background: transparent;
-    border: #d8d8d8;
-    border-radius: 40px;
-    color: #111;
-    cursor: pointer;
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 40px;
-    height: 120px;
-    width: 160px;
-    transition: background-color 0.3s ease-in-out;
-  }
-
-  #btn { /*may not be necessary*/
+/*
+button {
+  background: transparent;
+  border: #d8d8d8;
+  border-radius: 40px;
+  color: #111;
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 40px;
+  height: 120px;
+  width: 160px;
+  transition: background-color 0.3s ease-in-out;
+}
+*/
+/*
+#btn {
 	width: 160px;
 	z-index: 5;
 	margin: 0 30px;
 	cursor: pointer;
 	transition: 0.2s;
-  }
+}
 
 
-/*
-  #btn img {
-    transition: 0.2s;
-  }
 
-  #btn img:hover {
-    opacity: 0.8;
-    transform: scale(1.2);
-  }
-*/
+#btn img {
+  transition: 0.2s;
+}
+
+#btn img:hover {
+  opacity: 0.8;
+  transform: scale(1.2);
+}
 
 
-  #btn:hover {
+
+#btn:hover {
 	opacity: 0.8;
 	transform: scale(1.05);
 	color: #121;
-  }
+}
+
+*/
 
 h1 {
 	font-size: 40px;
@@ -136,12 +167,12 @@ footer {
 
 
 .container {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .container2 {
