@@ -14,6 +14,7 @@ html {
   }
 
 .menudiv {
+	position: relative;
 	height: 80px;
 	background-color: #e6e6e6;
 	width: 100%;
@@ -240,4 +241,18 @@ tr:hover {
 	background-color: #e5e5e5;
 	opacity: 0.92;
 	transform: scale(1.01);
+}
+
+/*FOR THE DIALOG*/
+
+.infodialog {
+	position: absolute;
+	left: 10%;
+	margin-top: 185px;
+	margin-bottom: 5px;
+	padding: 30px;
+	border: none;
+	border-radius: 10px;
+	background-color: #e6e6e6;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }

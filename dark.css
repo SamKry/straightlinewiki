@@ -20,6 +20,7 @@ html {
   }
 
 .menudiv {
+	position: relative;
 	height: 80px;
 	background-color: #383838;
 	width: 100%;
@@ -128,6 +129,7 @@ p {
 
 h3 {
 	font-size: 16px;
+	color: #eee;
 }
 
 
@@ -245,4 +247,19 @@ tr:hover {
 	background-color: #454545;
 	opacity: 0.92;
 	transform: scale(1.01);
+}
+
+
+/*FOR THE DIALOG*/
+
+.infodialog {
+	position: absolute;
+	left: 10%;
+	margin-top: 185px;
+	margin-bottom: 5px;
+	padding: 30px;
+	border: none;
+	border-radius: 10px;
+	background-color: #353535;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
