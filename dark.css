@@ -53,12 +53,11 @@ body {
 	line-height: 1.75em;
 	font-size: 16px;
 	background-color: #282828;
-/*	background-image: linear-gradient(to right, #cdcdcd, #abacab , #ccc, #abacab, #cdcdcd);*//*wtf was I thinking??? (Actually kinda cool, but not really)*/
 	color: #eee;
 	text-align: center;
 }
 
-::-moz-selection { /* (may not be relevant at all) Code for Firefox */
+::-moz-selection { /* (may not be relevant at all) */
   color: #232;
   background: #ccffcf;
 }
@@ -72,50 +71,6 @@ body {
 img {
 	max-width: 70%;
 }
-
-/*
- button {
-    background: transparent;
-    border: #111;
-    border-radius: 40px;
-    color: #efefef;
-    cursor: pointer;
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 40px;
-    height: 120px;
-    width: 160px;
-    transition: background-color 0.3s ease-in-out;
-  }
-
-  #btn {
-	width: 160px;
-	z-index: 5;
-	margin: 0 30px;
-	cursor: pointer;
-	transition: 0.2s;
-  }
-
-
-
-  #btn img {
-    transition: 0.2s;
-  }
-
-  #btn img:hover {
-    opacity: 0.8;
-    transform: scale(1.2);
-  }
-
-
-
-  #btn:hover {
-	opacity: 0.8;
-	transform: scale(1.05);
-	color: #efffef;
-  }
-
-*/
 
 h1 {
 	font-size: 40px;
