@@ -1,12 +1,14 @@
+Newest update: there probably are some more new SLMs out there, but I am gonna add them once I create a MySQL database.
+
+
+
+
+
+
+
+
 This document contained videos of SLMs that I had to add to the database gradually. Right now it's irrelevant because they have all be done. But I am keeping it because I might use it again later.
 I honestly have too much to do and too little free time to work on this at the moment.
-
-
-
-
-
-
-
 
 
 

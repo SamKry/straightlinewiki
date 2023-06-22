@@ -10,13 +10,6 @@ NON-YOUTUBE
 		https://www.atlasobscura.com/articles/geowizard-davies-straight-line-mission-across
 		https://www.theguardian.com/technology/2021/jun/11/straight-story-the-youtuber-taking-a-direct-route-to-success
 
-YOUTUBE
-	NON-GEOWIZARD
-		(this section is dedicated to youtube videos about SLMs that are NOT on the Geowizard channel)
-
-	GEOWIZARD
-		(this section is dedicated to youtube videos about SLMs from Geowizard himself)
-
 
 
 RULE FOR AWARDS:
