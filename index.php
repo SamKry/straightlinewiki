@@ -13,7 +13,7 @@ My first idea will be to actually use this index.php and delete this comment.-->
     <link rel="stylesheet" type="text/css" href="dark.css" media="screen and (min-width:768px)" id="dark-theme" disabled>
     <link rel="stylesheet" type="text/css" href="mobile.css" media="screen and (max-width:767px)">
     <title>Straight Line Wiki</title>
-    <link rel="icon" href="assets/images/question.png" type="image/icon type">
+    <link rel="icon" href="assets/images/logo.svg" type="image/icon type">
 </head>
 <body>
     <header>
