@@ -9,13 +9,28 @@ My first idea will be to actually use this index.php and delete this comment.-->
 <head>
     <meta charset='utf-8'/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen and (min-width:768px)" id="theme-style">
+    <!--link rel="stylesheet" type="text/css" href="style.css" media="screen and (min-width:768px)" id="theme-style">
     <link rel="stylesheet" type="text/css" href="dark.css" media="screen and (min-width:768px)" id="dark-theme" disabled>
-    <link rel="stylesheet" type="text/css" href="mobile.css" media="screen and (max-width:767px)">
+    <link rel="stylesheet" type="text/css" href="mobile.css" media="screen and (max-width:767px)"-->
     <title>Straight Line Wiki</title>
     <link rel="icon" href="assets/images/logo.svg" type="image/icon type">
+	<!--style-->
+	<?php
+    session_start();
+    $theme = isset($_SESSION['theme']) ? $_SESSION['theme'] : 'light';
+    $themeFile = ($theme === 'dark') ? 'dark.css' : 'style.css';
+    ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo $themeFile; ?>">
+
 </head>
 <body>
+
+	<form method="post" action="toggle_theme.php">
+        <button type="submit" name="theme-toggle-btn">
+            <?php echo ($theme === 'dark') ? 'Switch to Light Theme' : 'Switch to Dark Theme'; ?>
+        </button>
+    </form>
+
     <header>
         <h1>Straight Line Wiki</h1>
         <div class="menudiv">
@@ -31,9 +46,6 @@ My first idea will be to actually use this index.php and delete this comment.-->
         </dialog>
     </header>
 
-
-
-
     <main style="position: relative;">
 
 	<hr>
@@ -43,19 +55,15 @@ My first idea will be to actually use this index.php and delete this comment.-->
   <hr>
   <h4>Meaning of abbreviations:</h4>
   <p>N/D = No Data</p>
-  <p>N/A = Non-Applicable</p>
+  <p>- or N/A= Non-Applicable</p>
   <p>DCS = Data Coming Soon</p>
   <hr>
-  <!--old table>
+	<!--old table>
 	<div class="simple" id="My-iframe">
 		<iframe class="simple" src="table.html" id="My-iframe"></iframe>
 		<p></p>
 	</div>
-<old table ends-->
-
-
-
-
+	<old table ends-->
 
     <h1>Data from MySQL Table</h1>
 
