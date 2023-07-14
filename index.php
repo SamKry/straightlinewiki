@@ -59,7 +59,7 @@ My first idea will be to actually use this index.php and delete this comment.-->
 
     <h1>Data from MySQL Table</h1>
 
-    <table>
+    <table class="container">
 	<tr>
 	    <th>Title</th>
 	    <th>Straightliner</th>
@@ -196,9 +196,9 @@ error_reporting(E_ALL);
     </section>
     <hr>
   </div>
-
+<hr>
   <!--next steps-->
-  <div id="next">
+  <div id="next" class="container">
 	  <h3>Future Plans for this website</h3>
 	  <p>As you can see, this website is not close to complete yet. It lacks some important SLM data, and a lot of functionality.<br>My next steps on here are:</p>
 	  <hr>
@@ -226,9 +226,9 @@ error_reporting(E_ALL);
 	  <b>Asking people for help</b>
 	  <p>Maintaining the integrity of all the gathered data is more then I can just do in my free time.<br>For now, if you want to get in contact with me, you can email me at mail@simonjoel.com<br>Please note that I am not a professional.<br>I am just a random guy with a job and a life, making this site in my free time because I admire the people who go out and do straight line missions.</p>
   </div>
-
+<hr>
   <!--contacts-->
-  <div id="contact">
+  <div id="contact" class="container">
     <h3>Contact</h3>
     <p>For now, you can use this email address to contact me: mail@simonjoel.com</p>
   </div>
