@@ -98,14 +98,72 @@ error_reporting(E_ALL);
         	if ($result->num_rows > 0) {
         	    while ($row = $result->fetch_assoc()) {
         	        echo "<tr>";
+					//Title
         	        echo "<td>" . $row["Title"] . "</td>";
+					//Name
         	        echo "<td>" . $row["Straightliner"] . "</td>";
+					//Date
         	        echo "<td>" . $row["Posted_On"] . "</td>";
-        	        echo "<td>" . $row["Completeness"] . "</td>";
-					echo "<td>" . $row["Medal"] . "</td>";
-        	        echo "<td>" . $row["Burdell_Score"] . "</td>";
-        	        echo "<td>" . $row["Line_Length"] . "</td>";
-        	        echo "<td>" . $row["Max_Deviation"] . "</td>";
+					//Completeness
+					echo "<td>";
+					if ($row["Completeness"] !== null) {
+						echo $row["Completeness"] . "%";
+					} else {
+						echo "Incomplete";
+					}
+					echo "</td>";
+					//Medal
+					echo "<td>";
+					$medal = $row["Medal"];
+					switch ($medal) {
+						case 1:
+							echo "Platinum";
+							break;
+						case 2:
+							echo "Gold";
+							break;
+						case 3:
+							echo "Silver";
+							break;
+						case 4:
+							echo "Bronze";
+							break;
+						case 5:
+							echo "N/A";
+							break;
+						default:
+							echo "-";
+							break;
+					}
+					echo "</td>";
+					
+					//Burdell Score
+					echo "<td>";
+					if ($row["Burdell_Score"] !== null) {
+					    echo $row["Burdell_Score"] . "%";
+					} else {
+					    echo "N/D";
+					}
+					echo "</td>";
+
+					//Length
+					echo "<td>";
+					if ($row["Line_Length"] !== null) {
+						echo $row["Line_Length"] . " km";
+					} else {
+						echo "N/D";
+					}
+					echo "</td>";
+					//Max Deviation
+
+					echo "<td>";
+					if ($row["Max_Deviation"] !== null) {
+					    echo $row["Max_Deviation"] . " m";
+					} else {
+					    echo "N/D";
+					}
+					echo "</td>";
+
         	        echo "</tr>";
         	    }
         	} else {
@@ -116,14 +174,7 @@ error_reporting(E_ALL);
 	$conn->close();
         ?>
 
-
 </table>
-
-
-
-
-
-
 
 <!--explanations etc-->
 <hr>
