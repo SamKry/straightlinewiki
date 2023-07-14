@@ -33,7 +33,7 @@ html {
 	width: 100px;
 	font-size: 14px;
 	color: #121;
-  background: transparent;
+	background: transparent;
 	border: none;
 }
 
@@ -256,3 +256,21 @@ tr:hover {
 	background-color: #e6e6e6;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+
+button[name="theme-toggle-btn"] {
+	position: absolute;
+	right: 20px;
+	background-color: transparent;
+	border: none;
+	border-radius: 3px;
+	color: #111211;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  button[name="theme-toggle-btn"]:hover {
+	background-color: #a1a1a1;
+  }
+  
