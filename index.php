@@ -25,7 +25,7 @@
         </button>
     </form>
 
-    <header>
+    <header id="header">
         <h1>Straight Line Wiki</h1>
         <div class="menudiv">
           <a href="#slms"><button class="menubutton">Straight line what?</button></a>
@@ -237,7 +237,12 @@ error_reporting(E_ALL);
 </body>
 
 <footer>
-	    <a href="https://github.com/SimonJoelWarkentin/straightlinewiki" style="font-size: 10px;">This website is an Open Source project by Simon Joel.</a>
+
+
+	<a href="#header"><img src="assets/images/logo.svg" alt="logo"></a>
+<hr>
+	<a href="https://github.com/SimonJoelWarkentin/straightlinewiki" style="font-size: 10px;">This website is an Open Source project by Simon Joel.</a>
+
 </footer>
 
 </html>

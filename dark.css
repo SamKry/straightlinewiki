@@ -238,3 +238,15 @@ button[name="theme-toggle-btn"] {
 	background-color: #797979;
 	color: #111;
   }
+
+/*footer icon*/
+footer img {
+    display: block;
+    height: 50px;
+    margin: 0 auto;
+  }
+
+footer img:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+}
