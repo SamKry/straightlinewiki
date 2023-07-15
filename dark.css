@@ -235,5 +235,6 @@ button[name="theme-toggle-btn"] {
   }
   
   button[name="theme-toggle-btn"]:hover {
-	background-color: #353535;
+	background-color: #797979;
+	color: #111;
   }
