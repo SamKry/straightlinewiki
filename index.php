@@ -54,11 +54,6 @@ My first idea will be to actually use this index.php and delete this comment.-->
   <b>This website is dedicated to those who take on the mad challenge of straight line missions.</b>
   <p>Our ultimate goal is to index every relevant straight line a human has ever walked.</p>
   <hr>
-  <h4>Meaning of abbreviations:</h4>
-  <p>N/D = No Data</p>
-  <p>- or N/A= Non-Applicable</p>
-  <p>DCS = Data Coming Soon</p>
-  <hr>
 	<!--old table>
 	<div class="simple" id="My-iframe">
 		<iframe class="simple" src="table.html" id="My-iframe"></iframe>
@@ -66,7 +61,7 @@ My first idea will be to actually use this index.php and delete this comment.-->
 	</div>
 	<old table ends-->
 
-    <h1>Data from MySQL Table</h1>
+    <h1>Straight Line Missions:</h1>
 
     <table class="container">
 	<tr>
@@ -184,6 +179,14 @@ error_reporting(E_ALL);
         ?>
 
 </table>
+
+<hr>
+  <h4>Meaning of abbreviations:</h4>
+  <p>N/D = No Data</p>
+  <p>- or N/A = Non-Applicable</p>
+  <p>DCS = Data Coming Soon</p>
+  <hr>
+
 
 <!--explanations etc-->
 <hr>
