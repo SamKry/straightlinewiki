@@ -161,8 +161,7 @@ error_reporting(E_ALL);
 					    echo "N/D";
 					}
 					echo "</td>";
-
-        	        echo "</tr>";
+					echo "</tr>";
         	    }
         	} else {
         	    echo "<tr><td colspan='4'>No data found</td></tr>";
@@ -170,9 +169,10 @@ error_reporting(E_ALL);
 	
         // Close the database connection
 	$conn->close();
-        ?>
-
+?>
 </table>
+
+
 
 <hr>
   <h4>Meaning of abbreviations:</h4>
