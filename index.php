@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="dark.css" media="screen and (min-width:768px)" id="dark-theme" disabled>
     <link rel="stylesheet" type="text/css" href="mobile.css" media="screen and (max-width:767px)"-->
     <title>Straight Line Wiki</title>
-    <link rel="icon" href="assets/images/logo.svg" type="image/icon type">
+	<link rel="icon" href="assets/images/logo.svg" type="image/icon type">
 	<!--style-->
 	<?php
     session_start();
@@ -17,21 +17,19 @@
     <link rel="stylesheet" type="text/css" href="<?php echo $themeFile; ?>">
 
 </head>
-<body>
-
+<body id="top">
+	<a href="#top"><img src="assets/images/logo.svg" style="position: absolute; left: 20px; height: 45px;" alt="logo"></a>
 	<form method="post" action="toggle_theme.php">
         <button type="submit" name="theme-toggle-btn">
-            <?php echo ($theme === 'dark') ? 'Switch to Light Theme' : 'Switch to Dark Theme'; ?>
+			<?php echo ($theme === 'dark') ? 'Light Theme' : 'Dark Theme'; ?>
         </button>
     </form>
-
-    <header id="header">
+	<header>
         <h1>Straight Line Wiki</h1>
         <div class="menudiv">
           <a href="#slms"><button class="menubutton">Straight line what?</button></a>
           <a href="#criteria"><button class="menubutton">How to<br>measure lines</button></a>
           <button id="open-dialog-btn" class="menubutton">Submit a straight line</button>
-	<!--Note to future self: when sober, please get rid of this button. it was the old theme switch button and is not necessary anymore. I just tried to remove it and it broke the submit button and I have no fucking clue why, so please do it when sober and with more time.-->
 	  <a href="#contact" id="theme-toggle"><button class="menubutton">Contact Me<br> ⠀ </button></a>
 	</div>
 <dialog id="dialog" class="infodialog">
@@ -239,7 +237,7 @@ error_reporting(E_ALL);
 <footer>
 
 
-	<a href="#header"><img src="assets/images/logo.svg" alt="logo"></a>
+	<a href="#top"><img src="assets/images/logo.svg" alt="logo"></a>
 <hr>
 	<a href="https://github.com/SimonJoelWarkentin/straightlinewiki" style="font-size: 10px;">This website is an Open Source project by Simon Joel.</a>
 
