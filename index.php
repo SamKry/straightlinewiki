@@ -1,9 +1,3 @@
-<!--This is an example file of a php index. It is by no means ready and shall not be displayed yet.
-My intention is to use this instead of the index.html.
-I have taken a break for a few weeks because I was on vacation and defenetly lost momentum for the release of this website,
-But I doubt that anyone will ever read this note... If anyone doeas, please understand that my life is very stressful at this moment and I just want to make a few commits to start being active again.
-I have some great ideas for the new feature.
-My first idea will be to actually use this index.php and delete this comment.-->
 
 <!DOCTYPE html>
 <head>
@@ -210,15 +204,12 @@ error_reporting(E_ALL);
   </div>
 <hr>
   <!--next steps-->
-  <div id="next" class="container">
+  <div id="next">
 	  <h3>Future Plans for this website</h3>
 	  <p>As you can see, this website is not close to complete yet. It lacks some important SLM data, and a lot of functionality.<br>My next steps on here are:</p>
 	  <hr>
 	  <b>Adding more data</b>
 	  <p>There are quite a few more straight line missions on youtube.<br>Some of them are really impressive!<br>I am watching them one by one to get the correct data.</p>
-	  <hr>
-	  <b>Migrating the database</b>
-	  <p>Right now, the database is just an html table.<br>I want to migrate all the data to a MySQL database.</p>
 	  <hr>
 	  <b>Fixing the sorting</b>
 	  <p>Right now, the sorting function is not working properly for all columns.<br>Some of the columns are still sorted alphabetically when they shouldn't be.<br>I could just fiz the javascript, but I would probably have to fix it again after migrating the data, so I am leaving it for later.</p>
@@ -226,17 +217,11 @@ error_reporting(E_ALL);
 	  <b>Creating a detail section for every mission</b>
 	  <p>Some missions have important details about them that is not displayed in the table.<br>I want to make a section where I can paste more info about every mission, maybe even including a map.<br>This section should also contain a comment section where people can talk about the mission.</p>
     <hr>
-    <b>Fixing the Dark mode</b>
-	  <p>And by that I mean making it work on the table.</p>
-  	 <hr>
 	  <b>Making a section where people can submit more straight line missions</b>
-	  <p>...or even suggest edits in the existing ones.<br>This should be a form that is easy to fill out.<br>I am not prioritizing this because I would have to connect it to a database, and right now I don't have a real functioning database.<br>I promise I will, soon.</p>
-	  <hr>
-    <b>Creating a Logo</b>
-	  <p>...Or asking someone to create one.<br>I also need artwork for the buttons.</p>
+	  <p>...or even suggest edits in the existing ones.<br>This should be a form that is easy to fill out.</p>
 	  <hr>
 	  <b>Asking people for help</b>
-	  <p>Maintaining the integrity of all the gathered data is more then I can just do in my free time.<br>For now, if you want to get in contact with me, you can email me at mail@simonjoel.com<br>Please note that I am not a professional.<br>I am just a random guy with a job and a life, making this site in my free time because I admire the people who go out and do straight line missions.</p>
+	  <p>Maintaining the integrity of all the gathered data is more then I can just do in my free time.<br>For now, if you want to get in contact with me, you can email me at mail@simonjoel.com<br>Please note that I am not a professional.<br>I am just a random guy with a job and a life, making this site in my free time because I admire the people who go out and do straight line missions.<br>Contributors so far include: Ally from Ally's Adventures (created the logo)</p>
   </div>
 <hr>
   <!--contacts-->
