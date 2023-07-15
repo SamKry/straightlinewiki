@@ -29,17 +29,17 @@
         <h1>Straight Line Wiki</h1>
         <div class="menudiv">
           <a href="#slms"><button class="menubutton">Straight line what?</button></a>
-          <a href="#criteria"><button class="menubutton">How to measure lines</button></a>
+          <a href="#criteria"><button class="menubutton">How to<br>measure lines</button></a>
           <button id="open-dialog-btn" class="menubutton">Submit a straight line</button>
-<!--Note to future self: when sober, please get rid of this button. it was the old theme switch button and is not necessary anymore. I just tried to remove it and it broke the submit button and I have no fucking clue why, so please do it when sober and with more time.-->
-          <button class="menubutton" id="theme-toggle">Light theme / Dark theme</button>
+	<!--Note to future self: when sober, please get rid of this button. it was the old theme switch button and is not necessary anymore. I just tried to remove it and it broke the submit button and I have no fucking clue why, so please do it when sober and with more time.-->
+	  <a href="#contact" id="theme-toggle"><button class="menubutton">Contact Me<br> ⠀ </button></a>
 	</div>
-        <dialog id="dialog" class="infodialog">
-          <h3>Sorry...</h3>
-          <p>...This functionality is not available yet.</p>
-          <p>I am gonna implement it soon!</p>
-        </dialog>
-    </header>
+<dialog id="dialog" class="infodialog">
+  <h3>Sorry...</h3>
+  <p>...This functionality is not available yet.</p>
+  <p>I am gonna implement it soon!</p>
+</dialog>
+</header>
 
     <main style="position: relative;">
 
