@@ -56,15 +56,15 @@
     <h1>Straight Line Missions:</h1>
 
     <table class="container">
-	<tr>
-	    <th>Title</th>
-	    <th>Straightliner</th>
-	    <th>Posted On</th>
-	    <th>Completeness</th>
-		<th>Medal</th>
-		<th>Burdell Score</th>
-		<th>Line Length</th>
-		<th>Max Deviation</th>
+		<tr>
+    	<th data-sort-col="title">Title</th>
+    	<th data-sort-col="straightliner">Straightliner</th>
+    	<th data-sort-col="posted_on">Posted On</th>
+    	<th data-sort-col="completeness">Completeness</th>
+    	<th data-sort-col="medal">Medal</th>
+    	<th data-sort-col="burdell_score">Burdell Score</th>
+    	<th data-sort-col="line_length">Line Length</th>
+		<th data-sort-col="max_deviation">Max Deviation</th>
 	</tr>
 	<?php
 
@@ -229,6 +229,7 @@ error_reporting(E_ALL);
   </div>
 
   <!--js source-->
+	<script src="sort.js"></script>
     <script src="script.js"></script>
     </main>
 
