@@ -75,23 +75,24 @@ document.addEventListener("DOMContentLoaded", function () {
       const cell1 = getSortableValue(row1.cells[columnIndex].textContent.trim());
       const cell2 = getSortableValue(row2.cells[columnIndex].textContent.trim());
 
-      // If sorting the "Medal" column, use a custom comparison function based on the custom mapping
-        if (columnIndex === 4) {
-        const order = { "Platinum": 1, "Gold": 2, "Silver": 3, "Bronze": 4, "None": 5, "-": 6 };
-        const medal1 = order[cell1];
-        const medal2 = order[cell2];
+      if (columnIndex === 2) {
+// Sort the rows based on the selected column and sorting direction
+rows.sort((row1, row2) => {
+  const cell1 = row1.cells[columnIndex].textContent.trim();
+  const cell2 = row2.cells[columnIndex].textContent.trim();
 
-        // If either value is not in the custom mapping, treat it as the largest value (to be displayed at the bottom)
-        if (medal1 === undefined) return 1;
-        if (medal2 === undefined) return -1;
+  return direction === "asc" ? cell1.localeCompare(cell2) : cell2.localeCompare(cell1);
+});
 
-        return direction === "asc" ? medal1 - medal2 : medal2 - medal1;
-      } else if (columnIndex === 2) {
+
         // If sorting the "Posted_On" column, convert the date strings to Date objects for comparison
-        const date1 = new Date(cell1);
-        const date2 = new Date(cell2);
-        return direction === "asc" ? date1 - date2 : date2 - date1;
-      } else if (columnIndex === 3 || columnIndex === 5 || columnIndex === 6 || columnIndex === 7) {
+      const date1 = new Date(cell1);
+      const date2 = new Date(cell2);
+
+      // Compare the Date objects directly
+      return direction === "asc" ? cell1.localeCompare(cell2) : cell2.localeCompare(cell1);
+
+    } else if (columnIndex === 3 || columnIndex === 5 || columnIndex === 6 || columnIndex === 7) {
         // If sorting a column with decimal values, parse the numeric part for comparison
         const numericCell1 = parseFloat(cell1);
         const numericCell2 = parseFloat(cell2);
@@ -101,7 +102,20 @@ document.addEventListener("DOMContentLoaded", function () {
         if (isNaN(numericCell2)) return -1;
 
         return direction === "asc" ? numericCell1 - numericCell2 : numericCell2 - numericCell1;
-      } else {
+      } else if (columnIndex === 4) {
+        const order = { "Platinum": 1, "Gold": 2, "Silver": 3, "Bronze": 4, "None": 5, "-": 6 };
+        const medal1 = order[cell1];
+        const medal2 = order[cell2];
+
+        // If either value is not in the custom mapping, treat it as the largest value (to be displayed at the bottom)
+        if (medal1 === undefined) return 1;
+        if (medal2 === undefined) return -1;
+
+        return direction === "asc" ? medal1 - medal2 : medal2 - medal1;
+      }
+      
+      
+      else {
         // For other columns, use localeCompare for string comparison
         return direction === "asc" ? cell1.localeCompare(cell2) : cell2.localeCompare(cell1);
       }

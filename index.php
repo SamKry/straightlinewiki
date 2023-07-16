@@ -46,14 +46,9 @@
   <b>This website is dedicated to those who take on the mad challenge of straight line missions.</b>
   <p>Our ultimate goal is to index every relevant straight line a human has ever walked.</p>
   <hr>
-	<!--old table>
-	<div class="simple" id="My-iframe">
-		<iframe class="simple" src="table.html" id="My-iframe"></iframe>
-		<p></p>
-	</div>
-	<old table ends-->
 
     <h1>Straight Line Missions:</h1>
+	<b>The Sorting function for "Posted On" does not really work right. Could anyone with more Javascript knowledge please help me?</b>
 
     <table class="container">
 		<tr>
