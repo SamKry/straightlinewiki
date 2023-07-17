@@ -201,11 +201,11 @@ error_reporting(E_ALL);
 	  <h3>Future Plans for this website</h3>
 	  <p>As you can see, this website is not close to complete yet. It lacks some important SLM data, and a lot of functionality.<br>My next steps on here are:</p>
 	  <hr>
-	  <b>Adding more data</b>
-	  <p>There are quite a few more straight line missions on youtube.<br>Some of them are really impressive!<br>I am watching them one by one to get the correct data.</p>
+	  <b>Adding more Lines</b>
+	  <p>There are always more people posting Straight Line Missions on YouTube.<br>I am going to try watching everything I find...</p>
 	  <hr>
 	  <b>Fixing the sorting</b>
-	  <p>Right now, the sorting function is not working properly for all columns.<br>Some of the columns are still sorted alphabetically when they shouldn't be.<br>I could just fiz the javascript, but I would probably have to fix it again after migrating the data, so I am leaving it for later.</p>
+	  <p>Right now, the sorting function is not working properly for the date column.<br>If anyone reading this has more experience with JavaScript and/or more free time, please feel free to help me with this!</p>
 	  <hr>
 	  <b>Creating a detail section for every mission</b>
 	  <p>Some missions have important details about them that is not displayed in the table.<br>I want to make a section where I can paste more info about every mission, maybe even including a map.<br>This section should also contain a comment section where people can talk about the mission.</p>
