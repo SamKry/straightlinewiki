@@ -1,8 +1,4 @@
-1 Migrate site to the new server
-2 Create a database
-3 Connect atabase to php file
-4 Substitute html for php file
-5 Update javascript code with something that works
-6 Rewrite mobile.css and write mobiledark.css
-7 Review site to make sure things are at least acceptable
-8 sign up for Geowizards Patreon and tell people that the straightline.wiki exists
+1 Make Date sorting work on Posted On
+2 Make a mobile mode, then rewrite mobile.css and write mobiledark.css
+3 Review site to make sure things are at least acceptable
+4 sign up for Geowizards Patreon and tell people that the straightline.wiki exists

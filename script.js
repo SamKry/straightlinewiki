@@ -1,6 +1,6 @@
+//This code is not being used at all, I will just not delete it because I might or might not use it in the future
 
-//DIALOG BOX
-
+//Dialog Box
 const openDialogBtn = document.getElementById('open-dialog-btn');
 const dialog = document.getElementById('dialog');
 openDialogBtn.addEventListener('click', () => {
