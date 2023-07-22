@@ -202,7 +202,7 @@ error_reporting(E_ALL);
   <!--next steps-->
   <div id="next">
 	  <h3>Future Plans for this website</h3>
-	  <p>As you can see, this website is not close to complete yet. It lacks some important SLM data, and a lot of functionality.<br>My next steps on here are:</p>
+	  <p>As you can see, this website is not really complete yet. It lacks some important SLM data, and a lot of functionality.<br>My next steps on here are:</p>
 	  <hr>
 	  <b>Adding more Lines</b>
 	  <p>There are always more people posting Straight Line Missions on YouTube.<br>I am going to try watching everything I find...</p>
@@ -214,12 +214,13 @@ error_reporting(E_ALL);
 	  <p>...or even suggest edits in the existing ones.<br>This should be a form that is easy to fill out.</p>
 	  <hr>
 	  <b>Asking people for help</b>
-	  <p>Maintaining the integrity of all the gathered data is more then I can just do in my free time.<br>For now, if you want to get in contact with me, you can email me at mail@simonjoel.com<br>Please note that I am not a professional.<br>I am just a random guy with a job and a life, making this site in my free time because I admire the people who go out and do straight line missions.<br>Contributors so far include: Ally from Ally's Adventures (created the logo)</p>
+	  <p>Maintaining the integrity of all the gathered data is more then I can just do in my free time.<br>For now, if you want to get in contact with me, you can email me at mail@simonjoel.com<br>Please note that I am not a professional.<br>I am just a random guy with a job and a life, making this site in my free time because I admire the people who go out and do straight line missions.<br>Contributors so far include: Ally from Ally's Adventures</p>
   </div>
 <hr>
   <!--contacts-->
   <div id="contact" class="container">
     <h3>Contact</h3>
+	<p>A contact form is one of the next things I want to implement...</p>
     <p>For now, you can use this email address to contact me: mail@simonjoel.com</p>
   </div>
 
