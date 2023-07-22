@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="dark.css" media="screen and (min-width:768px)" id="dark-theme" disabled>
     <link rel="stylesheet" type="text/css" href="mobile.css" media="screen and (max-width:767px)"-->
     <title>Straight Line Wiki</title>
-	<link rel="icon" href="assets/images/logo.svg" type="image/icon type">
+	<link rel="icon" href="assets/images/compass01.png" type="image/icon type">
 	<!--style-->
 	<?php
     session_start();
@@ -18,7 +18,7 @@
 
 </head>
 <body id="top">
-	<a href="#top"><img src="assets/images/logo.svg" style="position: absolute; left: 20px; height: 45px;" alt="logo"></a>
+	<a href="#top"><img src="assets/images/compass01.png" style="position: absolute; left: 20px; height: 45px;" alt="logo"></a>
 	<form method="post" action="toggle_theme.php">
         <button type="submit" name="theme-toggle-btn">
 			<?php echo ($theme === 'dark') ? 'Light Theme' : 'Dark Theme'; ?>
@@ -233,7 +233,7 @@ error_reporting(E_ALL);
 <footer>
 
 
-	<a href="#top"><img src="assets/images/logo.svg" alt="logo"></a>
+	<a href="#top"><img src="assets/images/compass01.png" alt="logo"></a>
 <hr>
 	<a href="https://github.com/SimonJoelWarkentin/straightlinewiki" style="font-size: 10px;">This website is an Open Source project by Simon Joel.</a>
 
