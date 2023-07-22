@@ -10,24 +10,17 @@ document.addEventListener("DOMContentLoaded", function () {
     header.addEventListener("click", handleSortClick);
   });
 
-  // Sorting function to handle click events on table headers
-  function handleSortClick(event) {
-    // Get the column identifier from the 'data-sort-col' attribute of the clicked header
-    const columnToSort = event.target.dataset.sortCol;
+  // Custom date parsing function that handles month abbreviations
+  function parseCustomDate(dateString) {
+    const months = {
+      Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+      Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11
+    };
 
-    // If the sortDirection object doesn't have a property for this column, initialize it with "asc" (ascending)
-    if (!sortDirection[columnToSort]) {
-      sortDirection[columnToSort] = "asc";
-    } else {
-      // If the column is already being sorted, toggle the sorting direction
-      sortDirection[columnToSort] = sortDirection[columnToSort] === "asc" ? "desc" : "asc";
-    }
+    const [day, mon, year] = dateString.split(/\s*-\s*/);
+    const month = months[mon];
 
-    // Call the sorting function and pass the column identifier and sorting direction
-    sortTableData(columnToSort, sortDirection[columnToSort]);
-
-    // Prevent the default link behavior (to avoid page reload if you decide to use anchor tags for headers)
-    event.preventDefault();
+    return new Date(year, month, day);
   }
 
   // Sorting function for all columns
@@ -72,27 +65,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Sort the rows based on the selected column and sorting direction
     rows.sort((row1, row2) => {
-      const cell1 = getSortableValue(row1.cells[columnIndex].textContent.trim());
-      const cell2 = getSortableValue(row2.cells[columnIndex].textContent.trim());
+      const cell1 = row1.cells[columnIndex].textContent.trim();
+      const cell2 = row2.cells[columnIndex].textContent.trim();
 
       if (columnIndex === 2) {
-// Sort the rows based on the selected column and sorting direction
-rows.sort((row1, row2) => {
-  const cell1 = row1.cells[columnIndex].textContent.trim();
-  const cell2 = row2.cells[columnIndex].textContent.trim();
+        // If sorting the "Posted_On" column, parse the dates using the custom function
+        const date1 = parseCustomDate(cell1);
+        const date2 = parseCustomDate(cell2);
 
-  return direction === "asc" ? cell1.localeCompare(cell2) : cell2.localeCompare(cell1);
-});
-
-
-        // If sorting the "Posted_On" column, convert the date strings to Date objects for comparison
-      const date1 = new Date(cell1);
-      const date2 = new Date(cell2);
-
-      // Compare the Date objects directly
-      return direction === "asc" ? cell1.localeCompare(cell2) : cell2.localeCompare(cell1);
-
-    } else if (columnIndex === 3 || columnIndex === 5 || columnIndex === 6 || columnIndex === 7) {
+        // Compare the Date objects directly
+        return direction === "asc" ? date1 - date2 : date2 - date1;
+      } else if (columnIndex === 3 || columnIndex === 5 || columnIndex === 6 || columnIndex === 7) {
         // If sorting a column with decimal values, parse the numeric part for comparison
         const numericCell1 = parseFloat(cell1);
         const numericCell2 = parseFloat(cell2);
@@ -112,10 +95,7 @@ rows.sort((row1, row2) => {
         if (medal2 === undefined) return -1;
 
         return direction === "asc" ? medal1 - medal2 : medal2 - medal1;
-      }
-      
-      
-      else {
+      } else {
         // For other columns, use localeCompare for string comparison
         return direction === "asc" ? cell1.localeCompare(cell2) : cell2.localeCompare(cell1);
       }
@@ -132,10 +112,23 @@ rows.sort((row1, row2) => {
     });
   }
 
-  // Function to extract sortable values from cells that contain additional text (e.g., appendices like km, m, %, N/D, etc.)
-  function getSortableValue(cellText) {
-    // Match the numeric part of the cell text and return it as a sortable value
-    const numericPart = cellText.match(/-?\d+(\.\d+)?/);
-    return numericPart ? numericPart[0] : cellText;
+  // Sorting function to handle click events on table headers
+  function handleSortClick(event) {
+    // Get the column identifier from the 'data-sort-col' attribute of the clicked header
+    const columnToSort = event.target.dataset.sortCol;
+
+    // If the sortDirection object doesn't have a property for this column, initialize it with "asc" (ascending)
+    if (!sortDirection[columnToSort]) {
+      sortDirection[columnToSort] = "asc";
+    } else {
+      // If the column is already being sorted, toggle the sorting direction
+      sortDirection[columnToSort] = sortDirection[columnToSort] === "asc" ? "desc" : "asc";
+    }
+
+    // Call the sorting function and pass the column identifier and sorting direction
+    sortTableData(columnToSort, sortDirection[columnToSort]);
+
+    // Prevent the default link behavior (to avoid page reload if you decide to use anchor tags for headers)
+    event.preventDefault();
   }
 });

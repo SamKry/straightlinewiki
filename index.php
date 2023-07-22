@@ -74,94 +74,98 @@ error_reporting(E_ALL);
 		$dbname = getenv("DB_DATABASE");
 
         // Create a connection
-        	$conn = new mysqli($servername, $username, $password, $dbname);
+		$conn = new mysqli($servername, $username, $password, $dbname);
 
-        // Check the connection
-        	if ($conn->connect_error) {
-        	    die("Connection failed: " . $conn->connect_error);
-        	}
+		// Check the connection
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		}
+		
+		// Query to retrieve data from the table
+		$sql = "SELECT * FROM straightlines";
+		$result = $conn->query($sql);
+		
+		// Loop through the data and generate table rows
+		if ($result->num_rows > 0) {
+			while ($row = $result->fetch_assoc()) {
 
-        // Query to retrieve data from the table
-        	$sql = "SELECT * FROM straightlines";
-        	$result = $conn->query($sql);
-
-        // Loop through the data and generate table rows
-        	if ($result->num_rows > 0) {
-        	    while ($row = $result->fetch_assoc()) {
-        	        echo "<tr>";
-					//Title
-        	        echo "<td>" . $row["Title"] . "</td>";
-					//Name
-        	        echo "<td>" . $row["Straightliner"] . "</td>";
-					//Date
-        	        echo "<td>" . $row["Posted_On"] . "</td>";
-					//Completeness
-					echo "<td>";
-					if ($row["Completeness"] !== null) {
-						echo $row["Completeness"] . "%";
-					} else {
-						echo "Incomplete";
-					}
-					echo "</td>";
-					//Medal
-					echo "<td>";
-					$medal = $row["Medal"];
-					switch ($medal) {
-						case 1:
-							echo "Platinum";
-							break;
-						case 2:
-							echo "Gold";
-							break;
-						case 3:
-							echo "Silver";
-							break;
-						case 4:
-							echo "Bronze";
-							break;
-						case 5:
-							echo "N/A";
-							break;
-						default:
-							echo "-";
-							break;
-					}
-					echo "</td>";
-					
-					//Burdell Score
-					echo "<td>";
-					if ($row["Burdell_Score"] !== null) {
-					    echo $row["Burdell_Score"] . "%";
-					} else {
-					    echo "N/D";
-					}
-					echo "</td>";
-
-					//Length
-					echo "<td>";
-					if ($row["Line_Length"] !== null) {
-						echo $row["Line_Length"] . " km";
-					} else {
-						echo "N/D";
-					}
-					echo "</td>";
-					//Max Deviation
-
-					echo "<td>";
-					if ($row["Max_Deviation"] !== null) {
-					    echo $row["Max_Deviation"] . " m";
-					} else {
-					    echo "N/D";
-					}
-					echo "</td>";
-					echo "</tr>";
-        	    }
-        	} else {
-        	    echo "<tr><td colspan='4'>No data found</td></tr>";
-        	}
-	
-        // Close the database connection
-	$conn->close();
+				echo "<tr>";
+				// Title
+				echo "<td>" . $row["Title"] . "</td>";
+				// Name
+				echo "<td>" . $row["Straightliner"] . "</td>";
+		
+				// Date (in the format "dd - mon - yyyy")
+				echo "<td>" . date('d - M - Y', strtotime($row["Posted_On"])) . "</td>";
+		
+				// Completeness
+				echo "<td>";
+				if ($row["Completeness"] !== null) {
+					echo $row["Completeness"] . "%";
+				} else {
+					echo "Incomplete";
+				}
+				echo "</td>";
+		
+				// Medal
+				echo "<td>";
+				$medal = $row["Medal"];
+				switch ($medal) {
+					case 1:
+						echo "Platinum";
+						break;
+					case 2:
+						echo "Gold";
+						break;
+					case 3:
+						echo "Silver";
+						break;
+					case 4:
+						echo "Bronze";
+						break;
+					case 5:
+						echo "N/A";
+						break;
+					default:
+						echo "-";
+						break;
+				}
+				echo "</td>";
+		
+				// Burdell Score
+				echo "<td>";
+				if ($row["Burdell_Score"] !== null) {
+					echo $row["Burdell_Score"] . "%";
+				} else {
+					echo "N/D";
+				}
+				echo "</td>";
+		
+				// Length
+				echo "<td>";
+				if ($row["Line_Length"] !== null) {
+					echo $row["Line_Length"] . " km";
+				} else {
+					echo "N/D";
+				}
+				echo "</td>";
+		
+				// Max Deviation
+				echo "<td>";
+				if ($row["Max_Deviation"] !== null) {
+					echo $row["Max_Deviation"] . " m";
+				} else {
+					echo "N/D";
+				}
+				echo "</td>";
+				echo "</tr>";
+			}
+		} else {
+			echo "<tr><td colspan='4'>No data found</td></tr>";
+		}
+		
+		// Close the database connection
+		$conn->close();		
 ?>
 </table>
 
