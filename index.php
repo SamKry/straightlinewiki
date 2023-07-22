@@ -48,7 +48,6 @@
   <hr>
 
     <h1>Straight Line Missions:</h1>
-	<b>The Sorting function for "Posted On" does not really work right. Could anyone with more Javascript knowledge please help me?</b>
 
     <table class="container">
 		<tr>
@@ -207,9 +206,6 @@ error_reporting(E_ALL);
 	  <hr>
 	  <b>Adding more Lines</b>
 	  <p>There are always more people posting Straight Line Missions on YouTube.<br>I am going to try watching everything I find...</p>
-	  <hr>
-	  <b>Fixing the sorting</b>
-	  <p>Right now, the sorting function is not working properly for the date column.<br>If anyone reading this has more experience with JavaScript and/or more free time, please feel free to help me with this!</p>
 	  <hr>
 	  <b>Creating a detail section for every mission</b>
 	  <p>Some missions have important details about them that is not displayed in the table.<br>I want to make a section where I can paste more info about every mission, maybe even including a map.<br>This section should also contain a comment section where people can talk about the mission.</p>
