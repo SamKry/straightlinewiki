@@ -18,7 +18,7 @@
 
 </head>
 <body id="top">
-	<a href="#top"><img src="assets/images/compass01.png" style="position: absolute; left: 20px; height: 45px;" alt="logo"></a>
+	<a href="#top"><img src="assets/images/compass01.png" style="position: absolute; left: 20px; height: 50px;" alt="logo"></a>
 	<form method="post" action="toggle_theme.php">
         <button type="submit" name="theme-toggle-btn">
 			<?php echo ($theme === 'dark') ? 'Light Theme' : 'Dark Theme'; ?>
