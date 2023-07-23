@@ -89,8 +89,23 @@ error_reporting(E_ALL);
 			while ($row = $result->fetch_assoc()) {
 
 				echo "<tr>";
-				// Title
-				echo "<td>" . $row["Title"] . "</td>";
+				
+				// Title plus link
+				if ($row["link"] !== null) {
+					// Check if the link starts with "https://"
+					if (strpos($row["link"], "https://") === 0) {
+						// If the link starts with "https://", assume it's a direct article link
+						echo '<td><a href="' . $row["link"] . '" target="_blank">' . $row["Title"] . '</a></td>';
+					} else {
+						// Otherwise, assume it's a YouTube link and create the YouTube URL
+						$youtubeURL = 'https://www.youtube.com/watch?v=' . $row["link"];
+						echo '<td><a href="' . $youtubeURL . '" target="_blank">' . $row["Title"] . '</a></td>';
+					}
+				} else {
+					// If the link is NULL, display the "Title" as plain text without any link
+					echo "<td>" . $row["Title"] . "</td>";
+				}
+
 				// Name
 				echo "<td>" . $row["Straightliner"] . "</td>";
 		
@@ -157,6 +172,7 @@ error_reporting(E_ALL);
 					echo "N/D";
 				}
 				echo "</td>";
+
 				echo "</tr>";
 			}
 		} else {
