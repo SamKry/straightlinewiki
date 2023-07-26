@@ -1,6 +1,9 @@
 
 <!DOCTYPE html>
 <head>
+	<!--this is for the analytics. It is temporary. Later on I will self host plausible.-->
+	<script defer data-domain="straightline.wiki" src="https://plausible.io/js/script.js"></script>
+
     <meta charset='utf-8'/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--link rel="stylesheet" type="text/css" href="style.css" media="screen and (min-width:768px)" id="theme-style">
