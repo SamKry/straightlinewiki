@@ -202,13 +202,13 @@ error_reporting(E_ALL);
   <div class="container">
     <section id="slms">
       <h3>Straight Line Missions</h3>
-      <p>The Concept of a Straight Line Mission has been probably invented, certainly made popular, by youtuber Tom Davis, AKA Geowizard, long time lover of mischief and adventure. In the winter of 2018 he attempted something that, as far as we know, has never been done before: Walk across an entire country in a straight line.<br>Ever since, people have been inspired by him and attempted the same across other countries, parks, states, provinces, areas, etc.<br>Whether you consider this a sport, a trend, or just a mad idea, it has a rapidly growing fan base and many people are trying to follow all the insane adventurers who take on this ordeal.</p>
+      <p>The Concept of a Straight Line Mission has been probably invented, certainly made popular, by youtuber Thomas ("Tom") Davies, AKA GeoWizard, long time lover of mischief and adventure. In the winter of 2018 he attempted something that, as far as we know, has never been done before: Walk across an entire country in a straight line.<br>Ever since, people have been inspired by him and attempted the same across other countries, parks, states, provinces, areas, etc.<br>Whether you consider this a sport, a trend, or just a mad idea, it has a rapidly growing fan base and many people are trying to follow all the insane adventurers who take on this ordeal.</p>
       <hr>
     </section>
     <hr>
     <section id="criteria">
       <h3>The criteria by which Lines may be measured</h3>
-      <p>Straightness of lines can be measured in many ways, but there are two that have been established and accepted on the Geowizard channel: The Medals and the Burdell score.<br>The Medals are a simple standard invented by Tom Davis himself. They are scored based on the maximum deviation from the original line:<br>Platinum: 0-25m<br>Gold: 25-50m<br>Silver: 50-80m<br>Bronze: 80-120m</p><p>The Burdell Score is a method to score a line that is much more complex. It was created by a fan and you can read more about it on <a href="https://scoremyline.com">scoremyline.com</a>.</p>
+      <p>Straightness of lines can be measured in many ways, but there are two that have been established and accepted on the GeoWizard channel: The Medals and the Burdell score.<br>The Medals are a simple standard invented by Tom Davies himself. They are scored based on the maximum deviation from the original line:<br>Platinum: 0-25m<br>Gold: 25-50m<br>Silver: 50-80m<br>Bronze: 80-120m</p><p>The Burdell Score is a method to score a line that is much more complex. It was created by a fan and you can read more about it on <a href="https://scoremyline.com">scoremyline.com</a>.</p>
     </section>
     <hr>
     <section id="mission">
