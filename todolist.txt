@@ -1,3 +1,9 @@
-2 Make a mobile mode, then rewrite mobile.css and write mobiledark.css
-3 Review site to make sure things are at least acceptable
-4 Tell people that the straightline.wiki exists
+1 Make a form for line submissions
+1.1 Create another table for submissions
+1.2 whila at it, create a table for ddetail sections
+
+2 Create detail sections
+2.1 Detail section for each line
+2.2 detail section for each straightliner
+
+3 Make a mobile mode, then rewrite mobile.css and write mobiledark.css
