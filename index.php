@@ -208,7 +208,7 @@ error_reporting(E_ALL);
     <hr>
     <section id="criteria">
       <h3>The criteria by which Lines may be measured</h3>
-      <p>Straightness of lines can be measured in many ways, but there are two that have been established and accepted on the GeoWizard channel: The Medals and the Burdell score.<br>The Medals are a simple standard invented by Tom Davies himself. They are scored based on the maximum deviation from the original line:<br>Platinum: 0-25m<br>Gold: 25-50m<br>Silver: 50-80m<br>Bronze: 80-120m</p><p>The Burdell Score is a method to score a line that is much more complex. It was created by a fan and you can read more about it on <a href="https://scoremyline.com">scoremyline.com</a>.</p>
+      <p>Straightness of lines can be measured in many ways, but there are two that have been established and accepted on the GeoWizard channel: The Medals and the Burdell score.<br>The Medals are a simple standard invented by Tom Davies himself. They are scored based on the maximum deviation from the original line:<br>Platinum: 0-25m<br>Gold: 25-50m<br>Silver: 50-75m<br>Bronze: 75-100m<br>The deviations were previously defined as 80m and 120m for silver and bronze respectively.</p><p>The Burdell Score is a method to score a line that is much more complex. It was created by a fan and you can read more about it on <a href="https://scoremyline.com">scoremyline.com</a>.</p>
     </section>
     <hr>
     <section id="mission">

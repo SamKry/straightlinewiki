@@ -15,11 +15,19 @@ NON-YOUTUBE
 RULE FOR AWARDS:
 	https://piped.garudalinux.org/watch?v=Jk84QaNEOFw
 	9:15
-	Deviation map:
+	Old deviation map:
 		Platinum: 0-25m
 		Gold: 25-50m
 		Silver: 50-80m
 		Bronze: 80-120m
+
+	https://youtu.be/tfjReZ9cx2c?si=cA4cHEgViGvLhAmF
+	17:59
+	New deviation map:
+		Platinum: 0-25m
+		Gold: 25-50m
+		Silver: 50-75m
+		Bronze: 75-100m
 
 MORE INFO THAT WILL BE NEEDED LATER ON FOR INFO ON MISSIONS
 	https://piped.garudalinux.org/watch?v=0tDaIw0y3j8
